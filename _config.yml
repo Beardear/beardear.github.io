@@ -1,4 +1,4 @@
-layout: sidebar
+layout: stacked
 style: light
 
 plugins:
@@ -28,14 +28,17 @@ projects:
     projects:
     # - repo-name
 
-# social_media:
+social_media:
+  googlescholar: Moran Xu (许墨然)
   # behance: your_username
   # dribbble: your_username
   # facebook: your_username
   # hackerrank: your_username
   # instagram: your_username
   # keybase: your_username
-  # linkedin: your_username
+  linkedin: Moran Xu
+  website: https://moranxu.github.io
+  email: xumoran34@gmail.com
   # mastodon: your_username
   # medium: your_username
   # stackoverflow: your_user_id
@@ -56,3 +59,12 @@ topics:
   - name: Sass
     web_url: https://github.com/topics/sass
     image_url: https://raw.githubusercontent.com/github/explore/6c6508f34230f0ac0d49e847a326429eefbfc030/topics/sass/sass.png
+
+author:
+  name: Moran Xu
+  bio: >
+    Algorithm Engineer experienced in deep learning, computer vision, and X-ray reconstruction. 
+    MS in Computer Science from Washington University in St. Louis.
+    Currently working at Carl Zeiss X-Ray Microscopy developing cutting-edge image processing algorithms.
+  location: Dublin, CA
+  email: xumoran34@gmail.com

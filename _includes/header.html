@@ -1,33 +1,27 @@
-{% if site.style == 'dark' %}
-  {% assign icon_color = "#ffffff" %}
-{% else %}
-  {% assign icon_color = "#24292e" %}
-{% endif %}
+{% assign page_paths = site.header_pages | default: default_paths %}
 
-{% assign content = page.content %}
-
-{% assign posts_total = site.posts | size %}
-
-{% assign user = site.github.owner %}
-
-{% if page.path contains '_posts' %}
-  {% assign page_title = page.title %}
-  {% assign meta_description = page.content | strip_html | strip_newlines | xml_escape | truncate: 300 %}
-{% else %}
-  {% assign page_title = user.name %}
-  {% assign meta_description = user.bio | strip_html | strip_newlines | xml_escape | truncate: 300 %}
-{% endif %}
-
-<!doctype html>
-<html class="min-height-full">
-  <head>
-    <meta charset="utf-8">
-    <title>{{ page_title }}</title>
-    <meta name="description" content="{{ meta_description }}" />
-    <meta property="og:title" content="{{ user.name }}" />
-    <meta property="og:image" content="{{ user.avatar_url }}" />
-    <meta property="og:description" content="{{ meta_description }}" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link href="{{ "/assets/styles.css" | relative_url }}" rel="stylesheet" type="text/css">
-  </head>
-  <body class="bg-white min-height-full" {% if site.style == 'dark' %}style="background-color: #2f363d !important"{% endif %}>
+<div class="Header">
+  <div class="Header-item">
+    <a href="{{ '/' | relative_url }}" class="Header-link f4 d-flex flex-items-center">
+      <span>{{ site.title | default: site.github.repository_name }}</span>
+    </a>
+  </div>
+  <div class="Header-item Header-item--full">
+    <!-- Empty space to push the rest to the right -->
+  </div>
+  <div class="Header-item">
+    <a href="{{ '/' | relative_url }}" class="Header-link {% if page.url == '/' %}selected{% endif %}">Home</a>
+  </div>
+  <div class="Header-item">
+    <a href="{{ '/projects' | relative_url }}" class="Header-link {% if page.url == '/projects' %}selected{% endif %}">Projects</a>
+  </div>
+  <div class="Header-item">
+    <a href="{{ '/publications' | relative_url }}" class="Header-link {% if page.url == '/publications' %}selected{% endif %}">Publications</a>
+  </div>
+  <div class="Header-item">
+    <a href="{{ '/resume' | relative_url }}" class="Header-link {% if page.url == '/resume' %}selected{% endif %}">Resume</a>
+  </div>
+  <div class="Header-item">
+    <a href="{{ '/contact' | relative_url }}" class="Header-link {% if page.url == '/contact' %}selected{% endif %}">Contact</a>
+  </div>
+</div>
