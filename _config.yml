@@ -22,7 +22,7 @@ description: >-
   Personal website for Moran Xu, Algorithm Engineer specializing in deep learning and computer vision 
   at Carl Zeiss X-Ray Microscopy.
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
+url: "http://Beardear.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 
 projects:
   sort_by: pushed
