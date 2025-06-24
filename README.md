@@ -1,4 +1,4 @@
-# Get started building your personal website
+# Moran Xu's personal website
 
 ### Showcase your software development skills
 
