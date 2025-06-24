@@ -3,10 +3,12 @@ style: light
 
 plugins:
   - jekyll-octicons
-  - jekyll-github-metadata
+  # - jekyll-github-metadata
   - jemoji
 
 permalink: /:year/:month/:day/:title/
+
+avatar: /assets/images/profile.jpg
 
 defaults:
   -
@@ -16,37 +18,14 @@ defaults:
     values:
       layout: "post"
 
-# Site settings
-title: Moran Xu | Algorithm Engineer
-description: >-
-  Personal website for Moran Xu, Algorithm Engineer specializing in deep learning and computer vision 
-  at Carl Zeiss X-Ray Microscopy.
-baseurl: "" # the subpath of your site, e.g. /blog
-url: "http://Beardear.github.io" # the base hostname & protocol for your site, e.g. http://example.com
-
-projects:
-  sort_by: pushed
-  # sort_by options:
-  #   - pushed
-  #   - stars
-  limit: 9
-  exclude:
-    archived: false
-    forks: true
-    projects:
-    # - repo-name
-
 social_media:
-  googlescholar: Pz5A2ZkAAAAJ
   # behance: your_username
   # dribbble: your_username
   # facebook: your_username
   # hackerrank: your_username
   # instagram: your_username
   # keybase: your_username
-  linkedin: moran-xu-166641224
-  website: https://moranxu.github.io
-  email: xumoran34@gmail.com
+  linkedin: moran-xu-166641224/
   # mastodon: your_username
   # medium: your_username
   # stackoverflow: your_user_id
@@ -58,21 +37,12 @@ social_media:
   # youtube: your_username
 
 topics:
-  - name: Deep Learning
-    web_url: https://github.com/topics/deep-learning
-    image_url: https://raw.githubusercontent.com/github/explore/6c6508f34230f0ac0d49e847a326429eefbfc030/topics/deep-learning/deep-learning.png
+  - name: CSS
+    web_url: https://github.com/topics/css
+    image_url: https://raw.githubusercontent.com/github/explore/6c6508f34230f0ac0d49e847a326429eefbfc030/topics/css/css.png
 
-  - name: Computer Vision 
-    web_url: https://github.com/topics/computer-vision
+  - name: Web design
 
-  - name: X-ray Imaging
-    web_url: https://github.com/topics/xray
-
-author:
-  name: Moran Xu
-  bio: >
-    Algorithm Engineer experienced in deep learning, computer vision, and X-ray reconstruction. 
-    MS in Computer Science from Washington University in St. Louis.
-    Currently working at Carl Zeiss X-Ray Microscopy, Inc. developing cutting-edge image processing algorithms.
-  location: Dublin, CA
-  email: xumoran34@gmail.com
+  - name: Sass
+    web_url: https://github.com/topics/sass
+    image_url: https://raw.githubusercontent.com/github/explore/6c6508f34230f0ac0d49e847a326429eefbfc030/topics/sass/sass.png

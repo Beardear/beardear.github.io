@@ -1,2 +1,66 @@
+<!-- Copyright Footer -->
+<footer class="footer bg-gray-light border-top py-4 mt-6">
+  <div class="container-lg text-center">
+    <p class="text-gray f6 mb-0">
+      © 2025 Moran Xu. All rights reserved.
+    </p>
+    <p class="text-gray-light f6 mb-0">
+      Powered by <a href="https://jekyllrb.com/" class="text-gray-light">Jekyll</a>. Hosted by <a href="https://pages.github.com/" class="text-gray-light">GitHub Pages</a>
+    </p>
+  </div>
+</footer>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const navLinks = document.querySelectorAll('.nav-link');
+    const sections = document.querySelectorAll('.section');
+
+    // Handle nav link clicks
+    navLinks.forEach(link => {
+        link.addEventListener('click', function(e) {
+            e.preventDefault();
+            
+            // Remove active class from all links
+            navLinks.forEach(l => l.classList.remove('active'));
+            
+            // Add active class to clicked link
+            this.classList.add('active');
+            
+            // Scroll to target section
+            const targetId = this.getAttribute('data-target');
+            const targetSection = document.getElementById(targetId);
+            
+            if (targetSection) {
+                targetSection.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start'
+                });
+            }
+        });
+    });
+
+    // Highlight active section based on scroll position
+    window.addEventListener('scroll', function() {
+        let current = '';
+        
+        sections.forEach(section => {
+            const sectionTop = section.offsetTop - 100;
+            const sectionHeight = section.offsetHeight;
+            
+            if (window.scrollY >= sectionTop && window.scrollY < sectionTop + sectionHeight) {
+                current = section.getAttribute('id');
+            }
+        });
+
+        // Update active nav link
+        navLinks.forEach(link => {
+            link.classList.remove('active');
+            if (link.getAttribute('data-target') === current) {
+                link.classList.add('active');
+            }
+        });
+    });
+});
+</script>
   </body>
 </html>
