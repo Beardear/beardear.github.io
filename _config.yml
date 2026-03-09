@@ -2,7 +2,7 @@ layout: stacked
 style: light
 
 plugins:
-  - jekyll-octicons
+  # - jekyll-octicons
   # - jekyll-github-metadata
   - jemoji
 
