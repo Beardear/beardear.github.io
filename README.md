@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 # beardear.github.io
+=======
+# Moran Xu's personal website
+>>>>>>> cad9316079478b9b8c0c04f4db130918ae814764
 
 Personal portfolio website for Moran Xu — Applied Research Scientist and Senior Algorithm Engineer at Carl Zeiss, Inc.
 
