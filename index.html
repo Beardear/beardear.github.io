@@ -2,282 +2,149 @@
 layout: home
 ---
 
+    <!-- About -->
+    <section id="about" class="content-section">
+      <h2>About Me</h2>
+      <div class="about-text">
+        <p>
+          I am an Applied Research Scientist and Senior Algorithm Engineer at Carl Zeiss, Inc. , where I bridge advanced machine learning research with enterprise-grade production software. My core expertise spans Computer Vision, Computational Imaging, Agentic AI, and Multi-modal Understanding. I specialize in utilizing multimodal AI for complex image analysis, developing robust systems for automated feature and defect detection during cross-material inspection.
+        </p>
+        <p>
+          I hold an M.S. in Computer Science and Engineering from Washington University in St. Louis. My academic research focused heavily on deep generative modeling, including the development of state-of-the-art GAN architectures for ill-posed image restoration and 3D computed tomography reconstruction.
+        </p>
+        <p>
+          At Zeiss, I design and automate systems to solve complex vision and imaging tasks. I architect high-throughput C++ inference engines , and I leverage AI agents to architect and develop autonumous scanning systems, automate image analysis pipelines and streamline volumetric imaging algorithms. By combining dynamic scene representations - such as 3D Gaussian Splatting and Neural Radiance Fields (NeRF) - with scalable Azure ML cloud infrastructure, I have successfully opened up paths for scene simulation and understanding.
+        <p>
+          My research has been published in leading conferences and journals, including work on deep-learning-based
+          resolution recovery, progressive neural compression and scalable cloud infrastructure. Outside of work, I enjoy skiing, paddling, cycling,
+          and playing ping pong, as well as hitting the gym for a workout.
+        </p>
+    </section>
 
-<!-- Side Navigation Bar -->
-<nav class="sidebar">
-  <div class="sidebar-content">
+    <!-- Projects -->
+    <section id="projects" class="content-section">
+      <h2>Projects</h2>
+      <p class="section-subtitle">A growing collection of Research &amp; Application projects</p>
 
-    <!-- Navigation Menu -->
-    <ul class="nav-menu">
-      <li class="nav-item">
-        <a href="#about" class="nav-link active" data-target="about">About</a>
-      </li>
-      <li class="nav-item">
-        <a href="#publications" class="nav-link" data-target="publications">Publications</a>
-      </li>
-      <li class="nav-item">
-        <a href="#projects" class="nav-link" data-target="projects">Projects</a>
-      </li>
-      <li class="nav-item">
-        <a href="#resume" class="nav-link" data-target="resume">Resume</a>
-      </li>
-    </ul>
-  </div>
-</nav>
+      <div class="project-grid">
 
-<!-- Main Content -->
-<main class="main-content">
-  <!-- About Section -->
-  <section id="about" class="section">
-    <div class="d-md-flex p-4 height-full border rounded-2 box-shadow bg-white">
-      <div class="flex-self-stretch border-md-right border-gray-light pr-md-4 mb-md-0 mb-4">
-        <img src="/assets/images/profile.jpg" class="circle mb-3" style="max-width: 150px;" alt="Moran Xu">
-        <h1 class="h3 mb-2 lh-condensed">Moran Xu</h1>
-        <p class="mb-0 f4 text-gray">Senior Algorithm Engineer</p>
-        <p class="mb-0 f6 text-gray">ZEISS Microscopy</p>
-        <p class="mb-4 f6 text-gray">Dublin, CA</p>
-        <div class="d-flex flex-wrap flex-items-start">
-          <div class="mr-4 mb-4">
-            <div class="f4 mb-2 text-gray-light">Email</div>
-            <a href="mailto:xumoran34@gmail.com" class="d-block">xumoran34@gmail.com</a>
+        <!--
+        <a href="/projects/cv-imaging" class="project-card">
+          <div class="project-card__image">
+            <img src="/assets/images/Projects/CV.jpg" alt="Computer Vision">
           </div>
-          <div class="mr-4 mb-4">
-            <div class="f4 mb-2 text-gray-light">LinkedIn</div>
-            <a href="https://linkedin.com/in/moran-xu-166641224" class="d-block">LinkedIn</a>
+          <div class="project-card__body">
+            <p class="project-card__title">Computer Vision &amp; Image Analysis</p>
+            <p class="project-card__desc">Algorithms spanning denoising, super-resolution, classification, and generative models applied to advanced imaging systems.</p>
+            <div class="project-card__footer">
+              View project <i class="fas fa-arrow-right"></i>
+            </div>
           </div>
-          <div class="mr-4 mb-4">
-            <div class="f4 mb-2 text-gray-light">Google Scholar</div>
-            <a href="https://scholar.google.com/citations?user=Pz5A2ZkAAAAJ" class="d-block">Moran Xu (许墨然)</a>
+        </a>
+
+        <a href="/projects/cloud-computing" class="project-card">
+          <div class="project-card__image">
+            <img src="/assets/images/Projects/cloud-containers.png" alt="Cloud Computing">
           </div>
-        </div>
+          <div class="project-card__body">
+            <p class="project-card__title">Cloud Computing System</p>
+            <p class="project-card__desc">Azure cloud infrastructure replacing expensive workstations with scalable, cost-effective subscription-based solutions.</p>
+            <div class="project-card__footer">
+              View project <i class="fas fa-arrow-right"></i>
+            </div>
+          </div>
+        </a>
+        -->
+
+        <a href="/projects/microscopy-agent" class="project-card">
+          <div class="project-card__image">
+            <img src="/assets/images/Projects/microscopy-agent.png" alt="Microscopy Agent">
+          </div>
+          <div class="project-card__body">
+            <p class="project-card__title">AI Agent for Autonomous Image Acquisition and Multimodal Analysis</p>
+            <p class="project-card__desc">Autonomous scanning and image analysis pipelines powered by AI agents for computational microscopy workflows.</p>
+            <div class="project-card__footer">
+              View project <i class="fas fa-arrow-right"></i>
+            </div>
+          </div>
+        </a>
+
+        <!--
+        <a href="/projects/ml-lifecycle" class="project-card">
+          <div class="project-card__image">
+            <img src="/assets/images/Projects/ml-lifesycle.png" alt="ML Lifecycle">
+          </div>
+          <div class="project-card__body">
+            <p class="project-card__title">Machine Learning Lifecycle</p>
+            <p class="project-card__desc">End-to-end deep model development, deployment, evaluation, and C++ inference engines with automated testing pipelines.</p>
+            <div class="project-card__footer">
+              View project <i class="fas fa-arrow-right"></i>
+            </div>
+          </div>
+        </a>
+        -->
+
       </div>
-      <div class="col-md-8 col-lg-9 px-md-4">
-        <div class="f4 mb-6">
-          <div class="f4 mb-4">
-            <h2 class="h3 mb-2">About Me</h2>
-            <p class="mb-3">
-            I am an algorithm engineer at ZEISS Microscopy, where I develop cutting-edge imaging algorithms and cloud infrastructure solutions for next-generation biomedical and semiconductor X-ray systems. My work spans computer vision, computational imaging, and scalable cloud computing—driving innovative solutions that have generated millions in annual revenue.
+    </section>
 
-            I hold an M.S. in Computer Science and Engineering from Washington University in St. Louis, where I specialized in deep learning for image reconstruction, classification and detection, developed and optimized rateless edge computing solutions. My research journey began at Southeast University, where I explored generative adversarial networks for image restoration and 3D computed tomography reconstruction.
-
-            At Zeiss, I design and develop fully-3D diffusion-based vision foundation models for high-quality X-ray reconstruction and super-resolution. I created the patented "Throughput" mode technology that dramatically reduces sampling time, and engineered hybrid "2.5D" workflows for large field-of-view, high-resolution imaging. Beyond algorithms, I architected Azure cloud infrastructure that replaced expensive workstations with cost-effective subscription models.
-
-            My research has been published in leading conferences and journals, including work on deep-learning-based resolution recovery and progressive neural compression. I'm passionate about pushing the boundaries of what's possible in computational imaging and making advanced technology more accessible through innovative engineering.
-
-            Outside of research and engineering, I enjoy skiing, paddling, cycling and playing ping pong.
-            </p>
-            <p class="mb-3">
-              I have expertise in designing diffusion-based deep foundation models for X-ray reconstruction, leading Azure 
-              cloud-based development, and implementing LLM-empowered agents for various applications.
-            </p>
-            <p class="mb-3">
-              I hold a Master's degree in Computer Science from Washington University in St. Louis, and have published multiple papers in prestigious journals and conferences.
-            </p>
-          </div>
-
-          <div class="f4 mb-4">
-            <h2 class="h3 mb-2">Key Expertise</h2>
-            <ul class="list-style-none">
-              <li class="d-inline-block mr-3 mb-3">
-                <span class="f5 py-1 px-2 border rounded-1 bg-blue-light text-blue-dark">Deep Learning</span>
-              </li>
-              <li class="d-inline-block mr-3 mb-3">
-                <span class="f5 py-1 px-2 border rounded-1 bg-blue-light text-blue-dark">Computer Vision</span>
-              </li>
-              <li class="d-inline-block mr-3 mb-3">
-                <span class="f5 py-1 px-2 border rounded-1 bg-blue-light text-blue-dark">Image Processing</span>
-              </li>
-              <li class="d-inline-block mr-3 mb-3">
-                <span class="f5 py-1 px-2 border rounded-1 bg-blue-light text-blue-dark">C/C++</span>
-              </li>
-              <li class="d-inline-block mr-3 mb-3">
-                <span class="f5 py-1 px-2 border rounded-1 bg-blue-light text-blue-dark">PyTorch & Tensorflow</span>
-              </li>
-              <li class="d-inline-block mr-3 mb-3">
-                <span class="f5 py-1 px-2 border rounded-1 bg-blue-light text-blue-dark">Azure Cloud Computing</span>
-              </li>
-              <li class="d-inline-block mr-3 mb-3">
-                <span class="f5 py-1 px-2 border rounded-1 bg-blue-light text-blue-dark">Python</span>
-              </li>
-              <li class="d-inline-block mr-3 mb-3">
-                <span class="f5 py-1 px-2 border rounded-1 bg-blue-light text-blue-dark">MATLAB</span>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Publications Section -->
-  <section id="publications" class="section">
-    <div class="my-6">
+    <!-- Publications -->
+    <section id="publications" class="content-section">
       <h2>Publications</h2>
-      <div class="d-flex flex-wrap gutter-condensed mb-4">
-        <!-- Publication 1 -->
-        <div class="col-12 col-md-6 mb-3">
-          <a href="https://ieeexplore.ieee.org/document/9084157" target="_blank" class="d-block text-decoration-none">
-            <div class="height-full bg-white hover-bg-gray-light transition d-flex overflow-hidden rounded-2">
-              <!-- Left side image -->
-              <div class="flex-shrink-0" style="width: 120px;">
-                <img src="/assets/images/publications/l0-dl.jpg" 
-                    alt="l0-dl" 
-                    style="width: 100%; height: 100%; object-fit: cover; object-position: center;">
-              </div>
-              <!-- Right side content -->
-              <div class="flex-auto p-3">
-                <h3 class="f4 lh-condensed">Limited-Angle X-Ray CT Reconstruction Using Image Gradient ℓ₀-Norm With Dictionary Learning</h3>
-                <p class="f6 text-gray mb-2"><strong>Xu, M</strong>. Hu, D., Luo, F., Liu, F., Wang, S. and Wu, W.</p>
-                <p class="f6 text-gray mb-0">IEEE Transactions on Radiation and Plasma Medical Sciences. 2020 May 1;5(1):78-87</p>
-              </div>
-            </div>
-          </a>
-        </div>
-        
-        <!-- Publication 2 -->
-        <div class="col-12 col-md-6 mb-3">
-          <div class="height-full bg-white d-flex overflow-hidden rounded-2">
-            <!-- Left side image -->
-            <div class="flex-shrink-0" style="width: 120px;">
-              <img src="/assets/images/publications/resolution-enhancement.jpg" 
-                  alt="resolution-enhancement" 
-                  style="width: 100%; height: 100%; object-fit: cover; object-position: center;">
-            </div>
-            <!-- Right side content -->
-            <div class="flex-auto p-3">
-              <h3 class="f4 lh-condensed">Assessment of deep-learning-based resolution recovery algorithm relative to imaging system resolution and feature size</h3>
-              <p class="f6 text-gray mb-2">Bukka, V.V.R., <strong>Xu, M</strong>., Andrew, M. and Andreyev, A.</p>
-              <p class="f6 text-gray mb-0">Methods in Microscopy. 2025 Feb 11(0)</p>
+      <div class="pub-list">
+
+        <div class="pub-card">
+          <div class="pub-card__image">
+            <img src="/assets/images/publications/scalable-cloud-architecture.jpg" alt="scalable-cloud-architecture">
+          </div>
+          <div class="pub-card__body">
+            <p class="pub-card__title">
+              Scalable Cloud Architecture for Computational Microscopy: A Microservices Approach with Dynamic Resource Management
+            </p>
+            <p class="pub-card__authors"><strong>Xu, M.</strong>, Garg, A., Scheffler, F., Xu, S., Yang, F., Andrew, M. and Andreyev, A.</p>
+            <p class="pub-card__venue">IEEE 12th International Conference on Cyber Security and Cloud Computing (CSCloud) &middot; 2025</p>
+            <div class="pub-card__links">
+              <a href="https://ieeexplore.ieee.org/abstract/document/11261489" target="_blank" rel="noopener" class="pub-link">
+                <i class="fas fa-link"></i> Link
+              </a>
             </div>
           </div>
         </div>
 
-        <!-- Publication 3 -->
-        <div class="col-12 col-md-6 mb-3">
-          <div class="height-full bg-white d-flex overflow-hidden rounded-2">
-            <!-- Left side image -->
-            <div class="flex-shrink-0" style="width: 120px;">
-              <img src="/assets/images/publications/SISTER.jpg" 
-                  alt="SISTER" 
-                  style="width: 100%; height: 100%; object-fit: cover; object-position: center;">
-            </div>
-            <!-- Right side content -->
-            <div class="flex-auto p-3">
-              <h3 class="f4 lh-condensed">SISTER: Spectral-Image Similarity-Based Tensor With Enhanced-Sparsity Reconstruction for Sparse-View Multi-Energy CT</h3>
-              <p class="f6 text-gray mb-2">Hu, D, Wu, W, <strong>Xu, M</strong>., Zhang, Y, Liu, J, Ge, R, Chen, Y, Luo, L, Coatrieux, G.</p>
-              <p class="f6 text-gray mb-0">IEEE Transactions on Computational Imaging. 2019 Nov 29;6:477-90</p>
-            </div>
+        <div class="pub-card">
+          <div class="pub-card__image">
+            <img src="/assets/images/publications/l0-dl.jpg" alt="l0-dl">
           </div>
-        </div>
-        
-        <!-- Publication 4 -->
-        <div class="col-12 col-md-6 mb-3">
-          <div class="height-full bg-white d-flex overflow-hidden rounded-2">
-            <!-- Left side image -->
-            <div class="flex-shrink-0" style="width: 120px;">
-              <img src="/assets/images/publications/progressive-neural-compression.png" 
-                  alt="progressive-neural-compression" 
-                  style="width: 100%; height: 100%; object-fit: cover; object-position: center;">
-            </div>
-            <!-- Right side content -->
-            <div class="flex-auto p-3">
-              <h3 class="f4 lh-condensed">Progressive neural compression for adaptive image offloading under timing constraints</h3>
-              <p class="f6 text-gray mb-2">Wang, R., Liu, H., Qiu, J., <strong>Xu, M</strong>., Guérin, R. and Lu, C. (2023)</p>
-              <p class="f6 text-gray mb-0">2023 IEEE Real-Time Systems Symposium (RTSS) (pp. 118-130). IEEE</p>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="f6 text-right">
-        <a href="https://scholar.google.com/citations?user=Pz5A2ZkAAAAJ" target="_blank" class="muted-link">View all publications &rarr;</a>
-      </div>
-    </div>
-  </section>
-
-  <!-- Projects Section -->
-  <section id="projects" class="section">
-    <div class="my-6">
-      <h2>Featured Projects</h2>
-      <div class="d-sm-flex flex-wrap gutter-condensed mb-4">
-        <div class="col-sm-6 col-md-12 col-lg-6 col-xl-4 mb-3">
-          <div class="height-full border rounded-2 box-shadow bg-white d-flex overflow-hidden">
-            <!-- Left side image -->
-            <div class="flex-shrink-0" style="width: 120px;">
-              <img src="/assets/images/Projects/CV.jpg" 
-                  alt="Computer Vision" 
-                  style="width: 100%; height: 100%; object-fit: cover; object-position: center;">
-            </div>
-            <!-- Right side content -->
-            <div class="flex-auto p-3">
-              <h3 class="f4 lh-condensed mb-1">Computer Vision and Image & Video Analysis</h3>
-              <p class="f6 text-gray mb-0">
-                Developed Computer vision algorithms from denoising and super-resolution to classification and generative models, applied to advanced imaging systems.
-              </p>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-sm-6 col-md-12 col-lg-6 col-xl-4 mb-3">
-          <div class="height-full border rounded-2 box-shadow bg-white d-flex overflow-hidden">
-            <!-- Left side image -->
-            <div class="flex-shrink-0" style="width: 120px;">
-              <img src="/assets/images/Projects/cloud-containers.png" 
-                  alt="cloud containers" 
-                  style="width: 100%; height: 100%; object-fit: cover; object-position: center;">
-            </div>
-            <!-- Right side content -->
-            <div class="flex-auto p-3">
-              <h3 class="f4 lh-condensed mb-1">Cloud Computing System and Applications</h3>
-              <p class="f6 text-gray mb-0">
-                Led development of Azure cloud infrastructure replacing expensive workstations with cost-effective subscription models, including containerization of scalable computing solutions.
-              </p>
-            </div>
-          </div>
-        </div>
-        
-        <div class="col-sm-6 col-md-12 col-lg-6 col-xl-4 mb-3">
-          <div class="height-full border rounded-2 box-shadow bg-white d-flex overflow-hidden">
-            <!-- Left side image -->
-            <div class="flex-shrink-0" style="width: 120px;">
-              <img src="/assets/images/Projects/ml-lifesycle.png" 
-                  alt="ml-lifesycle" 
-                  style="width: 100%; height: 100%; object-fit: cover; object-position: center;">
-            </div>
-            <!-- Right side content -->
-            <div class="flex-auto p-3">
-              <h3 class="f4 lh-condensed mb-1">Machine Learning Lifecycle</h3>
-              <p class="f6 text-gray mb-0">
-                Led development of deep model development, deployment, evaluation and analysis, etc. Built C/C++ projects for fast model inference, with automated testing and characterization tools for algorithm evaluation.
-              </p>
+          <div class="pub-card__body">
+            <p class="pub-card__title">
+              Limited-Angle X-Ray CT Reconstruction Using Image Gradient &#8467;&#8320;-Norm With Dictionary Learning
+            </p>
+            <p class="pub-card__authors"><strong>Xu, M.</strong>, Hu, D., Luo, F., Liu, F., Wang, S. and Wu, W.</p>
+            <p class="pub-card__venue">IEEE Transactions on Radiation and Plasma Medical Sciences &middot; 2020 May;5(1):78&ndash;87</p>
+            <div class="pub-card__links">
+              <a href="https://ieeexplore.ieee.org/document/9084157" target="_blank" rel="noopener" class="pub-link">
+                <i class="fas fa-link"></i> Link
+              </a>
             </div>
           </div>
         </div>
 
       </div>
-    </div>
-  </section>
+      <div class="pub-footer">
+        <a href="https://scholar.google.com/citations?user=Pz5A2ZkAAAAJ" target="_blank" rel="noopener">
+          View all publications &rarr;
+        </a>
+      </div>
+    </section>
 
-  <!-- Resume Section -->
-  <section id="resume" class="section">
-    <div class="my-6">
+    <!-- Resume -->
+    <section id="resume" class="content-section">
       <h2>Resume</h2>
-      
-      <!-- PDF Download/View Button -->
-      <div class="mb-4">
-        <a href="/assets/files/resume.pdf" target="_blank" class="btn btn-outline ml-2">
-          📄 View PDF
+      <div class="resume-actions">
+        <a href="/assets/files/resume.pdf" target="_blank" rel="noopener" class="btn-resume">
+          <i class="fas fa-eye"></i> View
         </a>
-        <a href="/assets/files/resume.pdf" download="Moran_Xu_Resume.pdf" class="btn btn-outline ml-2">
-          ⬇️ Download PDF
+        <a href="/assets/files/resume.pdf" download="Moran_Xu_Resume.pdf" class="btn-resume">
+          <i class="fas fa-download"></i> Download
         </a>
       </div>
-
-      <!-- Your existing resume content below -->
-      <div class="d-flex flex-column gutter-condensed mb-4">
-        <!-- Your experience and education content -->
-      </div>
-    </div>
-  </section>
-</main>
-
-
+    </section>

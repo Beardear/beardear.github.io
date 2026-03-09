@@ -5,29 +5,56 @@
 {% endif %}
 
 {% assign content = page.content %}
-
 {% assign posts_total = site.posts | size %}
-
 {% assign user = site.github.owner %}
 
 {% if page.path contains '_posts' %}
   {% assign page_title = page.title %}
   {% assign meta_description = page.content | strip_html | strip_newlines | xml_escape | truncate: 300 %}
 {% else %}
-  {% assign page_title = user.name %}
-  {% assign meta_description = user.bio | strip_html | strip_newlines | xml_escape | truncate: 300 %}
+  {% assign page_title = "Moran Xu" %}
+  {% assign meta_description = "Senior Algorithm Engineer at Carl Zeiss. Research in computational imaging, deep learning, and cloud computing." %}
 {% endif %}
 
 <!doctype html>
-<html class="min-height-full">
+<html lang="en">
   <head>
     <meta charset="utf-8">
     <title>{{ page_title }}</title>
     <meta name="description" content="{{ meta_description }}" />
-    <meta property="og:title" content="{{ user.name }}" />
-    <meta property="og:image" content="{{ user.avatar_url }}" />
-    <meta property="og:description" content="{{ meta_description }}" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link href="{{ "/assets/styles.css" | relative_url }}" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer">
+    <!-- Prevent flash of wrong theme -->
+    <script>
+      (function() {
+        var t = localStorage.getItem('theme') || 'system';
+        if (t !== 'system') document.documentElement.setAttribute('data-theme', t);
+      })();
+    </script>
   </head>
-  <body class="bg-white min-height-full" {% if site.style == 'dark' %}style="background-color: #2f363d !important"{% endif %}>
+  <body>
+
+<!-- Theme toggle -->
+<div class="theme-toggle" id="themeToggle">
+  <button class="theme-toggle__btn" id="themeToggleBtn" aria-label="Toggle theme">
+    <i class="fas fa-circle-half-stroke" id="themeToggleIcon"></i>
+  </button>
+  <ul class="theme-toggle__menu" id="themeMenu">
+    <li>
+      <button data-theme-option="light">
+        <i class="fas fa-fw fa-sun"></i> Light
+      </button>
+    </li>
+    <li>
+      <button data-theme-option="dark">
+        <i class="fas fa-fw fa-moon"></i> Dark
+      </button>
+    </li>
+    <li>
+      <button data-theme-option="system">
+        <i class="fas fa-fw fa-desktop"></i> System
+      </button>
+    </li>
+  </ul>
+</div>

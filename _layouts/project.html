@@ -1,0 +1,19 @@
+{% include header.html %}
+
+<div class="page-layout">
+  {% include author-sidebar.html %}
+
+  <main class="main-content">
+    <div class="project-back">
+      <a href="/" class="back-btn">
+        <i class="fas fa-arrow-left"></i> Back
+      </a>
+    </div>
+
+    <div class="project-content">
+      {{ content }}
+    </div>
+  </main>
+</div>
+
+{% include footer.html %}

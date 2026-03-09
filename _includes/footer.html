@@ -1,65 +1,99 @@
-<!-- Copyright Footer -->
-<footer class="footer bg-gray-light border-top py-4 mt-6">
-  <div class="container-lg text-center">
-    <p class="text-gray f6 mb-0">
-      © 2025 Moran Xu. All rights reserved.
-    </p>
-    <p class="text-gray-light f6 mb-0">
-      Powered by <a href="https://jekyllrb.com/" class="text-gray-light">Jekyll</a>. Hosted by <a href="https://pages.github.com/" class="text-gray-light">GitHub Pages</a>
-    </p>
-  </div>
+<footer class="site-footer">
+  <p>&copy; 2025 Moran Xu. All rights reserved. &nbsp;&middot;&nbsp;
+    Powered by <a href="https://jekyllrb.com/">Jekyll</a> &nbsp;&middot;&nbsp;
+    Hosted by <a href="https://pages.github.com/">GitHub Pages</a>
+  </p>
 </footer>
 
 <script>
+// ── Theme toggle ──────────────────────────────────────────────────────────────
+(function() {
+  var icons = { light: 'fa-sun', dark: 'fa-moon', system: 'fa-circle-half-stroke' };
+
+  function applyTheme(theme) {
+    if (theme === 'system') {
+      document.documentElement.removeAttribute('data-theme');
+    } else {
+      document.documentElement.setAttribute('data-theme', theme);
+    }
+    localStorage.setItem('theme', theme);
+
+    var iconEl = document.getElementById('themeToggleIcon');
+    if (iconEl) {
+      iconEl.className = 'fas ' + icons[theme];
+    }
+
+    document.querySelectorAll('[data-theme-option]').forEach(function(btn) {
+      btn.classList.toggle('active', btn.getAttribute('data-theme-option') === theme);
+    });
+  }
+
+  document.addEventListener('DOMContentLoaded', function() {
+    var saved = localStorage.getItem('theme') || 'system';
+    applyTheme(saved);
+
+    var btn = document.getElementById('themeToggleBtn');
+    var menu = document.getElementById('themeMenu');
+
+    btn.addEventListener('click', function(e) {
+      e.stopPropagation();
+      menu.classList.toggle('open');
+    });
+
+    document.addEventListener('click', function() {
+      menu.classList.remove('open');
+    });
+
+    document.querySelectorAll('[data-theme-option]').forEach(function(optBtn) {
+      optBtn.addEventListener('click', function() {
+        applyTheme(this.getAttribute('data-theme-option'));
+        menu.classList.remove('open');
+      });
+    });
+  });
+})();
+
+// ── Scroll-spy ────────────────────────────────────────────────────────────────
 document.addEventListener('DOMContentLoaded', function() {
-    const navLinks = document.querySelectorAll('.nav-link');
-    const sections = document.querySelectorAll('.section');
+  const navLinks = document.querySelectorAll('.section-nav a');
+  const sections = document.querySelectorAll('.content-section');
 
-    // Handle nav link clicks
-    navLinks.forEach(link => {
-        link.addEventListener('click', function(e) {
-            e.preventDefault();
-            
-            // Remove active class from all links
-            navLinks.forEach(l => l.classList.remove('active'));
-            
-            // Add active class to clicked link
-            this.classList.add('active');
-            
-            // Scroll to target section
-            const targetId = this.getAttribute('data-target');
-            const targetSection = document.getElementById(targetId);
-            
-            if (targetSection) {
-                targetSection.scrollIntoView({
-                    behavior: 'smooth',
-                    block: 'start'
-                });
-            }
-        });
+  function updateActive() {
+    let current = '';
+    const nearBottom = (window.scrollY + window.innerHeight) >= (document.documentElement.scrollHeight - 10);
+
+    if (nearBottom) {
+      current = sections[sections.length - 1].getAttribute('id');
+    } else {
+      sections.forEach(function(section) {
+        if (window.scrollY >= section.offsetTop - 160) {
+          current = section.getAttribute('id');
+        }
+      });
+    }
+
+    navLinks.forEach(function(link) {
+      link.classList.remove('active');
+      var href = link.getAttribute('href').replace(/^\/?#/, '');
+      if (href === current) {
+        link.classList.add('active');
+      }
     });
+  }
 
-    // Highlight active section based on scroll position
-    window.addEventListener('scroll', function() {
-        let current = '';
-        
-        sections.forEach(section => {
-            const sectionTop = section.offsetTop - 100;
-            const sectionHeight = section.offsetHeight;
-            
-            if (window.scrollY >= sectionTop && window.scrollY < sectionTop + sectionHeight) {
-                current = section.getAttribute('id');
-            }
-        });
-
-        // Update active nav link
-        navLinks.forEach(link => {
-            link.classList.remove('active');
-            if (link.getAttribute('data-target') === current) {
-                link.classList.add('active');
-            }
-        });
+  navLinks.forEach(function(link) {
+    link.addEventListener('click', function(e) {
+      e.preventDefault();
+      const targetId = this.getAttribute('href').slice(1);
+      const target = document.getElementById(targetId);
+      if (target) {
+        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
     });
+  });
+
+  window.addEventListener('scroll', updateActive);
+  updateActive();
 });
 </script>
   </body>
