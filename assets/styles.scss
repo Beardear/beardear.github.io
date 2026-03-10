@@ -182,16 +182,19 @@ body {
 .page-layout {
   display: flex;
   min-height: 100vh;
+  max-width: 1060px;
+  margin: 0 auto;
 }
 
 // ─── Author Sidebar ────────────────────────────────────────────────────────────
 
 .author-sidebar {
-  position: fixed;
-  left: 0;
+  position: sticky;
   top: 0;
   width: 200px;
   height: 100vh;
+  flex-shrink: 0;
+  align-self: flex-start;
   background-color: var(--bg);
   overflow-y: auto;
   z-index: 100;
@@ -319,10 +322,9 @@ body {
 // ─── Main content area ──────────────────────────────────────────────────────────
 
 .main-content {
-  margin-left: 200px;
   flex: 1;
   padding: 0;
-  max-width: calc(200px + 860px);
+  min-width: 0;
 }
 
 // ─── Content sections ───────────────────────────────────────────────────────────
@@ -684,7 +686,9 @@ body {
 // ─── Footer ────────────────────────────────────────────────────────────────────
 
 .site-footer {
-  margin-left: 200px;
+  max-width: 1060px;
+  margin: 0 auto;
+  width: 100%;
   padding: 1.25rem 2.5rem;
   text-align: center;
   font-size: 0.78rem;
@@ -700,6 +704,20 @@ body {
 
 // ─── Responsive ────────────────────────────────────────────────────────────────
 
+// Narrow sidebar for small desktops / tablets in landscape (769px–1100px)
+@media (min-width: 769px) and (max-width: 1100px) {
+  .author-sidebar {
+    width: 170px;
+    padding: 1.75rem 1rem 1.25rem;
+  }
+
+  .author-avatar img {
+    width: 100px;
+    height: 100px;
+  }
+}
+
+// Tablet portrait / mobile (≤768px): sidebar moves to top
 @media (max-width: 768px) {
   .page-layout { flex-direction: column; }
 
@@ -708,20 +726,97 @@ body {
     width: 100%;
     height: auto;
     border-bottom: 1px solid var(--border);
-    padding: 1.5rem 1.25rem;
+    padding: 1.25rem 1.5rem;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 1rem;
+    text-align: left;
   }
 
-  .author-links,
+  .author-avatar {
+    margin-bottom: 0;
+    img {
+      width: 72px;
+      height: 72px;
+    }
+  }
+
+  .author-name {
+    font-size: 1rem;
+  }
+
+  .author-title {
+    font-size: 0.7rem;
+  }
+
+  .author-location {
+    font-size: 0.7rem;
+    white-space: normal;
+    &:last-of-type { margin-bottom: 0; }
+  }
+
+  // Group text info beside the avatar
+  .author-sidebar > :not(.author-avatar):not(.author-links):not(.section-nav) {
+    width: auto;
+  }
+
   .section-nav {
-    text-align: center;
-    a { justify-content: center; }
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.25rem;
+    margin: 0;
+    text-align: left;
+
+    li { margin-bottom: 0; }
+
+    a { padding: 0.25rem 0.55rem; font-size: 0.82rem; }
+  }
+
+  .author-links {
+    width: 100%;
+    justify-content: flex-start;
+    margin: 0;
   }
 
   .main-content {
-    margin-left: 0;
     padding: 0;
-    max-width: 100%;
   }
 
-  .site-footer { margin-left: 0; }
+  // Remove fixed card height so content isn't clipped
+  .pub-card { height: auto; }
+}
+
+// Small phones (≤480px): stack pub cards vertically, tighten spacing
+@media (max-width: 480px) {
+  .content-section {
+    padding: 1.25rem 1rem;
+    min-height: unset;
+  }
+
+  .about-text { padding: 0; }
+
+  .pub-card {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .pub-card__image {
+    width: 100%;
+    height: 130px;
+  }
+
+  // Two-column project grid on small phones
+  .project-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.75rem;
+  }
+
+  .project-card__image { height: 90px; }
+
+  .resume-actions {
+    flex-direction: column;
+    align-items: flex-start;
+  }
 }

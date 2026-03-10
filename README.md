@@ -6,7 +6,7 @@ Built with [Jekyll](https://jekyllrb.com/) and hosted on [GitHub Pages](https://
 
 ## About
 
-This site showcases research, projects, and publications in Computer Vision, Computational Imaging, Agentic AI, and Multi-modal Understanding. It features a fixed sidebar layout with light/dark/system theme support.
+This site showcases my research, projects, and publications in Computer Vision, Computational Imaging, Agentic AI, and Multi-modal Understanding. It features a fixed sidebar layout with light/dark/system theme support.
 
 ## Structure
 
